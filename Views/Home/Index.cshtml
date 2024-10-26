@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+}
+
+<div class="text-center bg-light p-5">
+    <h1 class="display-4">¡Bienvenido a Comprax!</h1>
+    <p class="lead">Gestión eficiente de compras y proveedores.</p>
+    <hr class="my-4">
+    <p>Con Comprax, puedes gestionar fácilmente tus insumos y proveedores en un solo lugar.</p>
+
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-3">
+            <a href="@Url.Action("Index", "Producto")" class="btn btn-primary btn-lg btn-block">Productos</a>
+        </div>
+        <div class="col-md-3">
+            <a href="@Url.Action("Index", "Proveedor")" class="btn btn-success btn-lg btn-block">Proveedores</a>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <h5>Aprende más:</h5>
+        <p>Visita nuestra <a href="https://learn.microsoft.com/aspnet/core" class="text-info">documentación de ASP.NET Core</a> para comenzar.</p>
+    </div>
+</div>

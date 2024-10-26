@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Comprax.Models.Proveedor>
+
+<h2>Proveedores</h2>
+<a asp-action="Create" class="btn btn-primary">Agregar Proveedor</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Dirección</th>
+            <th>Teléfono</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var proveedor in Model)
+        {
+            <tr>
+                <td>@proveedor.Nombre</td>
+                <td>@proveedor.Direccion</td>
+                <td>@proveedor.Telefono</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@proveedor.Id" class="btn btn-warning">Editar</a>
+                    <a asp-action="Delete" asp-route-id="@proveedor.Id" class="btn btn-danger">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
